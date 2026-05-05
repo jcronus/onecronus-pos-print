@@ -138,7 +138,13 @@
 
     setTimeout(() => {
       window.print();
-    }, 700);
+    }, 500);
+    
+    window.onafterprint = function () {
+      setTimeout(() => {
+        window.close();
+      }, 500);
+    };
   </script>
 </body>
 </html>
